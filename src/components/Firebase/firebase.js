@@ -11,6 +11,9 @@ const config = {
     messagingSenderId: "99214866652",
 };
 
+// const provider = new firebase.auth.GoogleAuthProvider();
+// provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+
 class Firebase {
     constructor() {
         app.initializeApp(config);
