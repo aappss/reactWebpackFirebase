@@ -6,6 +6,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.7.1",
     "bootstrap": "^4.2.1",
+    "express": "^4.16.4",
     "datatables.net": "^1.10.19",
     "es6-promise": "^4.2.5",
     "firebase": "^5.8.2",
@@ -28,7 +29,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "rename": "renamer --find App-clear.js --replace App.js ./src/App-clear.js && renamer --find style.css --replace index.css ./src/style.css ",
-    "remove-demo": "rimraf ./src/assets ./src/components ./src/pages ./src/Routes.js ./src/App.js ./src/index.css && npm run rename"
+    "remove-demo": "rimraf ./src/assets ./src/components ./src/pages ./src/Routes.js ./src/App.js ./src/index.css && npm run rename",
+    "start-heroku": "node server/server.js",
+    "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
