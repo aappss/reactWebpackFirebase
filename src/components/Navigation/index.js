@@ -39,9 +39,6 @@ class Navigation extends React.Component {
                                     <MDBNavbarToggler onClick={this.onClick} />
                                     <MDBCollapse id="navbarCollapse3" isOpen={this.state.collapse} navbar>
                                         <MDBNavbarNav left>
-                                            {/* <MDBNavItem active>
-                                                <MDBNavLink to={ROUTES.LANDING}>Landing</MDBNavLink>
-                                            </MDBNavItem> */}
                                             <MDBNavItem >
                                                 <MDBNavLink to={ROUTES.HOME}>Home</MDBNavLink>
                                             </MDBNavItem>
@@ -107,7 +104,6 @@ class Navigation extends React.Component {
                                                         <MDBIcon icon="user" />
                                                     </MDBDropdownToggle>
                                                     <MDBDropdownMenu className="dropdown-default" right>
-
                                                         <MDBDropdownItem href={ROUTES.SIGN_IN}>Sign In</MDBDropdownItem>
                                                     </MDBDropdownMenu>
                                                 </MDBDropdown>

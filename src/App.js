@@ -71,6 +71,7 @@ import PasswordForgetPage from '../src/components/PasswordForget';
 import HomePage from '../src/components/Home';
 import AccountPage from '../src/components/Account';
 import AdminPage from '../src/components/Admin';
+// import SignOut from '../src/components/SignOut';
 
 import * as ROUTES from '../src/constants/routes';
 import { withAuthentication } from '../src/components/Session';
@@ -86,6 +87,7 @@ const App = () => (
             <Route exact path={ROUTES.HOME} component={HomePage} />
             <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
             <Route exact path={ROUTES.ADMIN} component={AdminPage} />
+            {/* <Route exact path={ROUTES.SIGN_OUT} component={SignOut} /> */}
         </div>
     </Router>
 );

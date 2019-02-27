@@ -1,11 +1,9 @@
 import React from 'react';
-
+import { MDBDropdownItem } from 'mdbreact';
 import { withFirebase } from '../Firebase';
 
 const SignOutButton = ({ firebase }) => (
-    <button type="button" onClick={firebase.doSignOut}>
-        Sign Out
-  </button>
+    <MDBDropdownItem onClick={firebase.doSignOut}>SignOut</MDBDropdownItem>
 );
 
 export default withFirebase(SignOutButton);
