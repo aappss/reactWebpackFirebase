@@ -1,47 +1,46 @@
-import app from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/database';
+import app from "firebase/app";
+import "firebase/auth";
+import "firebase/database";
 
 const config = {
-    apiKey: "AIzaSyCXm5IROUJ_hviY2t2JdLI3yl-_4EP8RC8",
-    authDomain: "myfirebaseproject-617ae.firebaseapp.com",
-    databaseURL: "https://myfirebaseproject-617ae.firebaseio.com",
-    projectId: "myfirebaseproject-617ae",
-    storageBucket: "myfirebaseproject-617ae.appspot.com",
-    messagingSenderId: "99214866652",
+  apiKey: "AIzaSyCXm5IROUJ_hviY2t2JdLI3yl-_4EP8RC8",
+  authDomain: "myfirebaseproject-617ae.firebaseapp.com",
+  databaseURL: "https://myfirebaseproject-617ae.firebaseio.com",
+  projectId: "myfirebaseproject-617ae",
+  storageBucket: "myfirebaseproject-617ae.appspot.com",
+  messagingSenderId: "99214866652"
 };
 
 // const provider = new firebase.auth.GoogleAuthProvider();
 // provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
 class Firebase {
-    constructor() {
-        app.initializeApp(config);
+  constructor() {
+    app.initializeApp(config);
 
-        this.auth = app.auth();
-        this.db = app.database();
-    }
+    this.auth = app.auth();
+    this.db = app.database();
+  }
 
-    // *** Auth API ***
+  // *** Auth API ***
 
-    doCreateUserWithEmailAndPassword = (email, password) =>
-        this.auth.createUserWithEmailAndPassword(email, password);
+  doCreateUserWithEmailAndPassword = (email, password) =>
+    this.auth.createUserWithEmailAndPassword(email, password);
 
-    doSignInWithEmailAndPassword = (email, password) =>
-        this.auth.signInWithEmailAndPassword(email, password);
+  doSignInWithEmailAndPassword = (email, password) =>
+    this.auth.signInWithEmailAndPassword(email, password);
 
-    doSignOut = () => this.auth.signOut();
+  doSignOut = () => this.auth.signOut();
 
-    doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
+  doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
 
-    doPasswordUpdate = password =>
-        this.auth.currentUser.updatePassword(password);
+  doPasswordUpdate = password => this.auth.currentUser.updatePassword(password);
 
-    // *** User API ***
+  // *** User API ***
 
-    user = uid => this.db.ref(`users/${uid}`);
+  user = uid => this.db.ref(`users/${uid}`);
 
-    users = () => this.db.ref('users');
+  users = () => this.db.ref("users");
 }
 
 export default Firebase;

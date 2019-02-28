@@ -1,1 +1,1 @@
-const condition = authUser => authUser.role === 'ADMIN';
+const condition = authUser => authUser.role === "ADMIN";
